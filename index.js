@@ -36,10 +36,10 @@ function handleEvent(event) {
   }
 
   // create a echoing text message
-  const echo = { type: 'text', text: event.message.text };
+  const echo = { type: 'text', text: "You said: " + event.message.text };
 
   // use reply API
-  return client.replyMessage(event.replyToken, "Bot says: " + echo);
+  return client.replyMessage(event.replyToken, echo);
 }
 
 // listen on port
